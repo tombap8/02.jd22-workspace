@@ -12,3 +12,14 @@
 -> JDK 11 Releases 선택! -> 오른쪽 java SE 11 클릭!
 -> Windows/x64 Java Development Kit (sha256) 178.7 MB
 -> zip 을 풀면 jdk-11폴더를 특정위치에 가져다 놓음!
+
+[ JDK 위치 ]
+D:\JD22-Backend-Tom\01.Development-Kit
+
+[ PC 에 경로설정 ]
+설정 > 시스템 > 정보 > 고급 시스템 설정
+-> 창에서 [환경변수...] 클릭!
+
+환경변수....란? 
+-> 프로그램 실행시 전역적으로 경로를 등록하여
+잡아주는 곳!
