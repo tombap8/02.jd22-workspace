@@ -1,0 +1,15 @@
+[ vscode 자바개발환경 설정 ]
+
+1. 먼저 JDK를 설치후 환경변수 설정한다!
+
+2. vscode Java 확장 팩키지를 설치한다
+- 마켓플레이스에서 "Java"라고 검색
+Extension Pack for Java 이것을 설치!
+
+3. 자바 프로젝트를 실행한다
+1) F1키누름 : 검색어에 "java project"
+-> "Create Java Project..." 클릭
+2) "No build tools" 선택
+3) 상위지정폴더 선택(생성)
+4) 프로젝트 명을 쓰면 새로운 자바프로젝트가
+vscode 새창으로 열림!!!
