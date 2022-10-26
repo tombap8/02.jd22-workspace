@@ -36,6 +36,7 @@ MySQL, SQL Server, MS Access, Oracle, Sybase, Informix, Postgres
 	구분해서 보라고 하는 것일 뿐이다!)
 
 6. MySQL 
+
 MySQL은 세계에서 가장 많이 쓰이는 오픈 소스의 
 관계형 데이터베이스 관리 시스템이다. 
 다중 스레드, 다중 사용자 형식의 구조질의어 형식의 
