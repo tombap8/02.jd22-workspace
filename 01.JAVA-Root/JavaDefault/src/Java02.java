@@ -73,18 +73,22 @@ public class Java02 {
             7. 예약어사용불가 
          */
 
-         /* 
+         /*************************************** 
           [ 데이터 유형 ]
             -> 두 그룹으로 나뉩니다.
 
             1. 기본 데이터 유형 (8가지)
-
+            
+            - 정수형 데이터
             (1) byte	1 byte	 -128 ~ 127
             (2) short	2 bytes	 -32,768 ~ 32,767
             (3) int		4 bytes	 -21억 ~ 21억
             (4) long	8 bytes	 -9백경 ~ 9백경
+
+            - 실수형 데이터
             (5) float	4 bytes	 소수 6 to 7 자릿수
             (6) double	8 bytes	 소수 15 자릿수
+
             (7) boolean	1 bit	 true / false
             (8) char	2 bytes	 한문자 or 아스키값
 
@@ -94,10 +98,79 @@ public class Java02 {
             (답)
             int(정수) 및 double(부동 소수점 숫자)
 
-
-
             2. 기본이 아닌 데이터 유형
             - String, 배열 및 클래스 등
+
+            ***************************************/
+            int iamInt = 5; // int형
+            float iamFloat = 5.99f; // float형
+            char iamChar = 'D'; // char형
+            // -> "D"라고 쌍따옴표를 쓰면 에러!
+            // 한글자 전용 홑따옴표만 쓸 수 있음!!!
+            boolean iamBoolean = true; // boolean형
+            String iamString = "안뇽~!"; // String형
+
+            System.out.println("난정수: "+iamInt);
+            System.out.println("난실수: "+iamFloat);
+            System.out.println("난한글자: "+iamChar);
+            System.out.println("난불린: "+iamBoolean);
+            System.out.println("난문자: "+iamString);
+
+            System.out.println("");
+
+            // 데이터형별 크기체크
+            System.out.println("[데이터형별 크기체크]");
+            // 1. byte : -128 ~ 127
+            byte numByte = -128; 
+            // -129 와 같이 범위밖은 에러!
+            System.out.println("byte: "+ numByte);
+
+            // 2. short : -32,768 ~ 32,767 
+            // -> 0때문에 +자릿수 하나적음
+            short numShort = 32767;
+            System.out.println("short: "+numShort);
+
+            // 3. int : -21억 ~ 21억
+            // 세부범위: -2,147,483,648 ~ 2,147,483,647
+            int numInt = 2147483647;
+            System.out.println("int: " + numInt);
+
+            // 4. long : -9백경 ~ 9백경
+            // 세부범위: -9,223,372,036,854,775,808 ~ 
+            //          9,223,372,036,854,775,807
+            // 특이사항 -> 범위안의 숫자일 지라도 끝에 L
+            // 표시를 하지 않으면 int형 상수로 처리한다!
+            // int범위를 벗어나는 에러가 발생한다!
+            // 끝에 L자를 써줘야 한다(소문자l도 가능 but헷갈림!)
+            long numLong = 9223372036854775807L;
+            System.out.println("long: "+numLong);
+
+            // 5. float : 소수 자릿수 6 ~ 7
+            // 특이사항 : 숫자데이터 끝에 F로 처리해야 같은형임!
+            // 소수점 아래 넘치는 경우 7째 자리에서 반올림함!
+            float numFloat = 5.12345678F; // 결과: 5.123457
+            System.out.println("float: "+numFloat);
+
+            // 6. double : 소수 자릿수 15
+            // 특이사항 : 숫자데이터 끝에 D로 처리해야 같은형임!
+            // float이나 double은 근사값이므로 끝자리수가 달라질 수 있음!
+            double numDouble = 7.123456789123456789123456D;
+            System.out.println("double: "+numDouble);
+
+            // 과학적인 10의 거듭제곱 표시 사용가능(e+자릿수)
+            // float이나 double은 소수점이 없으면 기본 한자릿수 표시함
+            float f1 = 35e3F;
+            double d1 = 12E4D;
+            System.out.println("거듭제곱 출력: \n"+ f1 + "\n" + d1);
+            // \(역슬래쉬)n 은 줄바꿈기호
+
+
+
+
+
+
+
+            /********************************************
 
             * String 유형은 Java에서 너무 많이 사용되고 통합되어 
             * 일부에서는 이를 "특별한 아홉 번째 유형"이라고 불리움.
@@ -106,6 +179,7 @@ public class Java02 {
             * Java의 String은 객체를 참조하기 때문에 실제로는 
             * 기본이 아닌 데이터 유형 String 객체에는 문자열에 대한 
             * 특정 작업을 수행하는데 사용되는 메서드가 있음.
+
             [ 기본이 아닌 데이터 유형 ]
             기본이 아닌 데이터 형식은 개체를 참조하기 때문에 
             참조 형식 이라고함.
@@ -126,6 +200,6 @@ public class Java02 {
 
             기본이 아닌 유형의 예로는 
             Strings / Arrays / Classes / Interface 등이 있음
-          */
+          ********************************************/
     }
 }
