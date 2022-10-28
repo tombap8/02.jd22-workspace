@@ -164,6 +164,12 @@ public class Java02 {
             System.out.println("거듭제곱 출력: \n"+ f1 + "\n" + d1);
             // \(역슬래쉬)n 은 줄바꿈기호
 
+            // 불린값 (ture / false)
+            boolean isJavaFun = true;
+            boolean isFishTasty = false;
+            System.out.println("자바는 재밌나?"+isJavaFun);
+            System.out.println("물고기 맛있나?"+isFishTasty);
+
 
 
 
