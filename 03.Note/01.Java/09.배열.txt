@@ -1,4 +1,5 @@
 [자바 배열]
+
 배열은 각 값에 대해 별도의 변수를 선언하는 대신 
 단일 변수에 여러 값을 저장하는 데 사용됨
 
@@ -70,4 +71,13 @@ arrNums 는 두 개의 배열을 요소로 포함하는 배열이다.
     int[][] arrNums = { {1, 2, 3, 4}, {5, 6, 7} };
     int x = myNumbers[1][2];
     System.out.println(x); // Outputs 7
+
+(3) for문을 활용한 2차원배열 순회
+- 2중 for문을 사용하여 2차원배열을 값에 접근한다.
+예)
+    int[][] sounds = { {"멍멍","야옹","컹컹","썁썁"}, {"호이", "보이", "소이"} };
+    for (int i = 0; i < sounds.length; ++i) {
+    for(int j = 0; j < sounds[i].length; ++j) {
+        System.out.println(sounds[i][j]);
+    }
 
