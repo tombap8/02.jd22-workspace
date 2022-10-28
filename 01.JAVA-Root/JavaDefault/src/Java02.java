@@ -1,3 +1,4 @@
+// Java02.변수와 데이터형
 public class Java02 {
     public static void main(String[] args) {
         /* [ 자바 변수 ]
