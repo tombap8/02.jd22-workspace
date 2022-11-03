@@ -66,30 +66,33 @@ public class Java04 {
             System.out.println();
 
             /////////////////////////////////////
-            // 2. if문
-            // : 조건이 true일때 실행할 코드를 제어함
-
-            // if (조건문) {
-            // // 실행코드
-            // } else if (조건문) {
-            // // 실행코드
-            // } else {
-            // // 실행코드
-            // }
-
-            // if : 지정된 조건이 true인 경우 실행할 코드
-            // else if : 상단 조건이 false인 경우 새로운 조건 추가
-            // else : 모든 조건에 해당없을 경우 실행할 코드
-
+            /*
+             * 2. if문
+             * : 조건이 true일때 실행할 코드를 제어함
+             * 
+             * if (조건문) {
+             * // 실행코드
+             * } else if (조건문) {
+             * // 실행코드
+             * } else {
+             * // 실행코드
+             * }
+             * 
+             * if : 지정된 조건이 true인 경우 실행할 코드
+             * else if : 상단 조건이 false인 경우 새로운 조건 추가
+             * else : 모든 조건에 해당없을 경우 실행할 코드
+             */
             System.out.println("오늘은 당신의 생일인가요?(예/아니오)");
             String birth = myObj.nextLine();
             System.out.println();
             System.out.println(
                     birth.equals("예") ? "생일축하해요!" : "오늘도행복하세요!");
 
-            // 3. 삼항연산자(짧은 if문)
-            // 변수 = (조건문) ? true시 실행문 : false시 실행문;
-            // 비?집:놀이동산
+            /*
+             * 3. 삼항연산자(짧은 if문)
+             * 변수 = (조건문) ? true시 실행문 : false시 실행문;
+             * 비?집:놀이동산
+             */
 
             System.out.println();
             System.out.println("오늘 점심메뉴를 선택하세요!");
@@ -122,20 +125,22 @@ public class Java04 {
 
             } //////////// switch ////////////////
 
-            // 4. switch 문
-
-            // : 단일조건을 분류하여 실행코드를 나눔
-
-            // switch(변수) {
-            // case x:
-            // // 실행코드
-            // break;
-            // case y:
-            // // 실행코드
-            // break;
-            // default:
-            // // 실행코드
-            // }
+            /*
+             * 4. switch 문
+             * 
+             * : 단일조건을 분류하여 실행코드를 나눔
+             * 
+             * switch(변수) {
+             * case x:
+             * // 실행코드
+             * break;
+             * case y:
+             * // 실행코드
+             * break;
+             * default:
+             * // 실행코드
+             * }
+             */
 
             System.out.println();
             System.out.println(
@@ -255,13 +260,15 @@ public class Java04 {
 
             // "하준상"은 제외, "예비:이병준"부터 출력안함!
             System.out.println(
-                "#올림픽 경기에 참가할 축구선수 명단:");
+                    "#올림픽 경기에 참가할 축구선수 명단:");
             /// for-each
-            for(String mem : player){
+            for (String mem : player) {
                 // "하준상" 거르기 -> continue
-                if(mem=="하준상") continue;
+                if (mem == "하준상")
+                    continue;
                 // "예비:이병준" 부터 빠져나감! -> break
-                if(mem=="예비:이병준") break;
+                if (mem == "예비:이병준")
+                    break;
                 System.out.println(mem);
             } /////////// for-each ////////////
 
