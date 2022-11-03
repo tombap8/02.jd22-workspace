@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 // Java04. 자바 제어문(if,switch,while,for문), 배열
@@ -159,11 +160,19 @@ public class Java04 {
             // // 실행코드
             // }
 
+            // [세자리마다 콤마찍기 방법:]
+            // DecimalFormat 클래스
+            // 생성: DecimalFormat 변수 = new DecimalFormat(형식)
+            // 사용: 변수.format(사용할변수)
+            DecimalFormat df = new DecimalFormat("###,###");
+            // ###,### -> 샾은 숫자자리를 의미, 3자리마다 콤마형식
+
             // 자신의 월급을 쓰고 몇번 월급 받고 싶은지 써서
             // 월급의 총액을 알아보자!
             System.out.println("당신의 월급은 얼마입니까?");
             int myPay = myObj.nextInt();
-            System.out.println("월급: " + myPay + "원");
+            System.out.println("월급: " +
+                    df.format(myPay) + "원");
             System.out.println();
 
             System.out.println("당신은 당신의 회사에서 몇번이나 월급을 받고 싶나요?");
@@ -174,11 +183,12 @@ public class Java04 {
             // 월급횟수 증가변수
             int payCycle = 1;
 
+            // 일단 월급은 한번받고 시작한다!!!
             do {
                 System.out.println("월급 " +
-                        myPay + "원 *" +
+                        df.format(myPay) + "원 *" +
                         payCycle + "번 받고 \n총액:" +
-                        (myPay * payCycle) + "원");
+                        df.format(myPay * payCycle) + "원");
 
                 // 증감필수!!!
                 payCycle++;
@@ -194,6 +204,19 @@ public class Java04 {
             // }
             // while (조건문);
 
+
+            // 무지개색을 배열변수에 넣고 for문 돌리기
+
+            // 7. for문
+            // - 지정된 횟수 만큼 코드를 반복실행하여 제어함
+    
+            // for (시작값; 한계값; 증감) {
+            // // 실행코드
+            // }
+    
+            // (1) 시작값 : 변수선언과 시작값 할당
+            // (2) 한계값 : 변수의 한계값 설정
+            // (3) 증감 : 변수의 증가 / 감소
         } ///////////////// try문 (스캐너) /////////////////////
           // catch문 (에러발생시 처리 구역)
         catch (Exception e) {
@@ -206,16 +229,6 @@ public class Java04 {
                     "꼭 숫자로 입력바랍니다!\n다시갑니다!\n");
         }
 
-        // 7. for문
-        // - 지정된 횟수 만큼 코드를 반복실행하여 제어함
-
-        // for (시작값; 한계값; 증감) {
-        // // 실행코드
-        // }
-
-        // (1) 시작값 : 변수선언과 시작값 할당
-        // (2) 한계값 : 변수의 한계값 설정
-        // (3) 증감 : 변수의 증가 / 감소
 
         // 8. for-each 문
         // - 배열값 만큼 자동으로 변수에 할당하면 실행코드 반복 제어함
