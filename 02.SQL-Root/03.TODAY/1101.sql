@@ -35,8 +35,8 @@ ALTER TABLE `friends`
 ADD `age` int;
 */
 
-ALTER TABLE `todolist`
-DROP COLUMN `auth`;
+-- ALTER TABLE `todolist`
+-- DROP COLUMN `auth`;
 
 /* 
 [ 테이블 컬럼 지우기 ]
