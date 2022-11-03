@@ -138,14 +138,14 @@ public class Java04 {
 
             System.out.println();
             System.out.println(
-                "지금 빵을 몇개 먹고 싶은가? \n개수를 숫자로 써라! 그럼 빵줄께!^^");
+                    "지금 빵을 몇개 먹고 싶은가? \n개수를 숫자로 써라! 그럼 빵줄께!^^");
             System.out.println("#빵개수: ");
             int bread = myObj.nextInt();
             System.out.println();
 
             // 숫자증가변수
             int bnum = 0;
-            while(bnum < bread){
+            while (bnum < bread) {
                 bnum++; // 1씩증가
                 System.out.print("빵 ");
             } /////// while문 //////////
@@ -154,7 +154,7 @@ public class Java04 {
 
             // 5. while문
             // - 조건이 true인 동안 반복실행 코드를 제어함
-    
+
             // while (조건문) {
             // // 실행코드
             // }
@@ -163,39 +163,39 @@ public class Java04 {
             // 월급의 총액을 알아보자!
             System.out.println("당신의 월급은 얼마입니까?");
             int myPay = myObj.nextInt();
-            System.out.println("월급: "+myPay+"원");
+            System.out.println("월급: " + myPay + "원");
             System.out.println();
 
             System.out.println("당신은 당신의 회사에서 몇번이나 월급을 받고 싶나요?");
             int payNum = myObj.nextInt();
-            System.out.println("월급횟수: "+payNum);
+            System.out.println("월급횟수: " + payNum);
             System.out.println();
 
             // 월급횟수 증가변수
             int payCycle = 1;
 
-            do{
-                System.out.println("월급 "+myPay+"원 *"+
-                payCycle+"번 받고 \n총액:"+
-                (myPay*payCycle)+"원");
+            do {
+                System.out.println("월급 " +
+                        myPay + "원 *" +
+                        payCycle + "번 받고 \n총액:" +
+                        (myPay * payCycle) + "원");
 
                 // 증감필수!!!
                 payCycle++;
-            } while(payCycle <= payNum); // 세미콜론 필수!!!
+            } while (payCycle <= payNum); // 세미콜론 필수!!!
 
-             System.out.println();
+            System.out.println();
 
             // 6. Do/While문
             // - 먼저 코드를 실행후 반복실행 여부를 제어함
-    
+
             // do {
             // // 실행코드
             // }
             // while (조건문);
 
-
         } ///////////////// try문 (스캐너) /////////////////////
-        // catch문 (에러발생시 처리 구역)
+          // catch문 (에러발생시 처리 구역)
         catch (Exception e) {
             // e.getMessage() -> 기본 에러메시지
             // System.out.println(e.getMessage());
@@ -203,14 +203,8 @@ public class Java04 {
 
             // 사용자가 보여주는 메시지
             System.out.println(
-                "꼭 숫자로 입력바랍니다!\n다시갑니다!\n");
+                    "꼭 숫자로 입력바랍니다!\n다시갑니다!\n");
         }
-
-
-
-
-
-
 
         // 7. for문
         // - 지정된 횟수 만큼 코드를 반복실행하여 제어함
