@@ -159,6 +159,39 @@ public class Java04 {
             // // 실행코드
             // }
 
+            // 자신의 월급을 쓰고 몇번 월급 받고 싶은지 써서
+            // 월급의 총액을 알아보자!
+            System.out.println("당신의 월급은 얼마입니까?");
+            int myPay = myObj.nextInt();
+            System.out.println("월급: "+myPay+"원");
+            System.out.println();
+
+            System.out.println("당신은 당신의 회사에서 몇번이나 월급을 받고 싶나요?");
+            int payNum = myObj.nextInt();
+            System.out.println("월급횟수: "+payNum);
+            System.out.println();
+
+            // 월급횟수 증가변수
+            int payCycle = 1;
+
+            do{
+                System.out.println("월급 "+myPay+"원 *"+
+                payCycle+"번 받고 \n총액:"+
+                (myPay*payCycle)+"원");
+
+                // 증감필수!!!
+                payCycle++;
+            } while(payCycle <= payNum); // 세미콜론 필수!!!
+
+             System.out.println();
+
+            // 6. Do/While문
+            // - 먼저 코드를 실행후 반복실행 여부를 제어함
+    
+            // do {
+            // // 실행코드
+            // }
+            // while (조건문);
 
 
         } ///////////////// try문 (스캐너) /////////////////////
@@ -178,13 +211,6 @@ public class Java04 {
 
 
 
-        // 6. Do/While문
-        // - 먼저 코드를 실행후 반복실행 여부를 제어함
-
-        // do {
-        // // 실행코드
-        // }
-        // while (조건문);
 
         // 7. for문
         // - 지정된 횟수 만큼 코드를 반복실행하여 제어함
