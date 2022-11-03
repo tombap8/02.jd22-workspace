@@ -135,14 +135,48 @@ public class Java04 {
             // default:
             // // 실행코드
             // }
+
+            System.out.println();
+            System.out.println(
+                "지금 빵을 몇개 먹고 싶은가? \n개수를 숫자로 써라! 그럼 빵줄께!^^");
+            System.out.println("#빵개수: ");
+            int bread = myObj.nextInt();
+            System.out.println();
+
+            // 숫자증가변수
+            int bnum = 0;
+            while(bnum < bread){
+                bnum++; // 1씩증가
+                System.out.print("빵 ");
+            } /////// while문 //////////
+
+            System.out.println("\n");
+
+            // 5. while문
+            // - 조건이 true인 동안 반복실행 코드를 제어함
+    
+            // while (조건문) {
+            // // 실행코드
+            // }
+
+
+
         } ///////////////// try문 (스캐너) /////////////////////
+        // catch문 (에러발생시 처리 구역)
+        catch (Exception e) {
+            // e.getMessage() -> 기본 에러메시지
+            // System.out.println(e.getMessage());
+            // 결과: null -> 내용이 없는 데이터!
 
-        // 5. while문
-        // - 조건이 true인 동안 반복실행 코드를 제어함
+            // 사용자가 보여주는 메시지
+            System.out.println(
+                "꼭 숫자로 입력바랍니다!\n다시갑니다!\n");
+        }
 
-        // while (조건문) {
-        // // 실행코드
-        // }
+
+
+
+
 
         // 6. Do/While문
         // - 먼저 코드를 실행후 반복실행 여부를 제어함
