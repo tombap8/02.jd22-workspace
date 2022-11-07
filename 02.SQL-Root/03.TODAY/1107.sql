@@ -62,3 +62,27 @@ SELECT CONCAT(`first_name`," ",`last_name`) AS "이름", `company` AS "회사명
 
 -- 쿼리11 : `customers`테이블
 SELECT CONCAT(`first_name`," ",`last_name`) AS "이름", `company` AS "회사명", `business_phone` AS "연락처" FROM `customers` WHERE `first_name` LIKE "b%d";
+
+-- - 다중조건(곱) : WHERE 컬럼명 = 값 AND 컬럼명 = 값
+
+-- 쿼리12 : `orders` 테이블 
+SELECT * FROM `orders` 
+WHERE `ship_city` = "New York";
+
+-- 쿼리13 : `orders` 테이블 
+SELECT * FROM `orders` 
+WHERE `ship_city` = "New York" and `payment_type` = "Credit Card";
+
+
+-- - 다중조건(합) : WHERE 컬럼명 = 값 OR 컬럼명 = 값
+
+-- 쿼리14 : `orders` 테이블 
+SELECT * FROM `orders` 
+WHERE `ship_city` = "New York" OR `ship_city` = "Chicago";
+
+-- - NOT조건 : WHERE NOT 컬럼명 = 값
+
+
+-- -> 위의 여러 조건을 쓸 경우 예시
+--     SELECT * FROM `테이블명`
+--     WHERE 컬럼명 = 값 AND NOT 컬럼명 = 값 OR 컬럼명 = 값
