@@ -80,7 +80,10 @@ WHERE `ship_city` = "New York" and `payment_type` = "Credit Card";
 SELECT * FROM `orders` 
 WHERE `ship_city` = "New York" OR `ship_city` = "Chicago";
 
+
 -- - NOT조건 : WHERE NOT 컬럼명 = 값
+
+-- 쿼리15 : `orders` 테이블 
 SELECT * FROM `orders` WHERE NOT `payment_type` = "Credit Card";
 -- 결과보고  특이사항: `payment_type` = "Credit Card"가 아닌
 -- 데이터가 나왔으나 null값도 제외됨!(구체적인 값이 없으므로 자동제외!)
@@ -89,3 +92,15 @@ SELECT * FROM `orders` WHERE NOT `payment_type` = "Credit Card";
 -- -> 위의 여러 조건을 쓸 경우 예시
 --     SELECT * FROM `테이블명`
 --     WHERE 컬럼명 = 값 AND NOT 컬럼명 = 값 OR 컬럼명 = 값
+
+-- 쿼리16 : `orders` 테이블 
+SELECT * FROM `orders` WHERE `payment_type` = "check" AND NOT `ship_city` = "new york" OR `ship_name` = "Christina Lee";
+
+-- SELECT COUNT(*) FROM `테이블명`
+-- -> 전체 레코드 개수 
+-- -> 뒤에 조건문이 있다면 조건에 해당하는 레코드 개수
+-- 쿼리17 : `orders` 테이블 
+SELECT COUNT(*) AS "전체 레코드수" FROM `orders` 
+WHERE `payment_type` = "check" 
+AND NOT `ship_city` = "new york" 
+OR `ship_name` = "Christina Lee";
