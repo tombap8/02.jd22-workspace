@@ -56,3 +56,9 @@ SELECT CONCAT(`first_name`," ",`last_name`) AS "이름", `company` AS "회사명
 
 -- 쿼리10 : `customers`테이블
 SELECT CONCAT(`first_name`," ",`last_name`) AS "이름", `company` AS "회사명", `business_phone` AS "연락처" FROM `customers` WHERE `first_name` LIKE "a_______%";
+
+-- -> %를 중간에 사용하여 어떤문자로 시작하고 
+-- 어떤문자로 끝나는 모든것 검색
+
+-- 쿼리11 : `customers`테이블
+SELECT CONCAT(`first_name`," ",`last_name`) AS "이름", `company` AS "회사명", `business_phone` AS "연락처" FROM `customers` WHERE `first_name` LIKE "b%d";
