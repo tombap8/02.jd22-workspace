@@ -81,6 +81,9 @@ SELECT * FROM `orders`
 WHERE `ship_city` = "New York" OR `ship_city` = "Chicago";
 
 -- - NOT조건 : WHERE NOT 컬럼명 = 값
+SELECT * FROM `orders` WHERE NOT `payment_type` = "Credit Card";
+-- 결과보고  특이사항: `payment_type` = "Credit Card"가 아닌
+-- 데이터가 나왔으나 null값도 제외됨!(구체적인 값이 없으므로 자동제외!)
 
 
 -- -> 위의 여러 조건을 쓸 경우 예시
