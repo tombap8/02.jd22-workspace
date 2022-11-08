@@ -25,6 +25,11 @@ https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.exe
     2) Service 태그 바로 아래 첫번째 Connector의 포트값을 8080 기본에서 80으로 변경
     <Connector port="80" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443"/>
 
+    3) 서버를 여러개의 포트로 작동하게 설정할 수 있다.
+     <Service name="Catalina2">...</Service>
+     서비스 태그요소를 여러개 만들 수있고 이름을 다르게 준다.
+     내부에 위의 1)번과 2)번을 설정하고 포트번호를 다르게 설정한다.
+
 
 [3.MySQL Jar파일 넣기]
 
