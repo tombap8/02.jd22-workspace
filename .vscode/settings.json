@@ -1,3 +1,12 @@
 {
-    "java.project.outputPath": "01.JAVA-Root\\JavaDefault\\bin"
+    "java.project.outputPath": "01.JAVA-Root\\JavaDefault\\bin",
+    "redhat.telemetry.enabled": true,
+    "rsp-ui.rsp.java.home": "",
+    "rsp-ui.enableStartServerOnActivation": [
+        {
+            "id": "redhat.vscode-community-server-connector",
+            "name": "Community Server Connector",
+            "startOnActivation": true
+        }
+    ]
 }
