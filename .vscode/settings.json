@@ -1,6 +1,6 @@
 {
     "java.project.outputPath": "01.JAVA-Root\\JavaDefault\\bin",
-    "redhat.telemetry.enabled": true,
+    "redhat.telemetry.enabled": false,
     "rsp-ui.rsp.java.home": "",
     "rsp-ui.enableStartServerOnActivation": [
         {
@@ -8,5 +8,7 @@
             "name": "Community Server Connector",
             "startOnActivation": true
         }
-    ]
+    ],
+    "rsp-ui.newServerWebviewWorkflow": false,
+    "vscodeAdapters.showChannelOnServerOutput": false
 }
