@@ -1,0 +1,15 @@
+[ 이클립스 설치 및 프로젝트 생성 ]
+
+1. 다운로드 받기
+https://www.eclipse.org/downloads/packages/release/2020-09/r
+
+2. exe로 설치
+-> 선택: 두번째 
+Eclipse IDE for Enterprise Java and Web Developers 
+
+3. 실행하기 : LAUNCH
+-> 작업공간 설정하기 : workspace
+
+4. 다이나믹 웹 프로젝트 생성하기
+-> File > Dynamic Web Project 선택
+-> 프로젝트명 넣고 finish

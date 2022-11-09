@@ -18,7 +18,7 @@ https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.exe
 
 (2) 수정내용 :
 
-    1) Host태그쪽에 보면 Value태그가 있는데 바로위에 Context라는 태그를 추가
+    1) Host태그쪽에 보면 Valve태그가 있는데 바로위에 Context라는 태그를 추가
     <Context path="" docBase="JSP작업을 할 위치" workDir="컴파일class위치"></Context>
 
     + 컴파일된 class 파일 위치를 추가해 준다. 
