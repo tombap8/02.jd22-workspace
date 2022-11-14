@@ -61,10 +61,16 @@ public class Java06 {
         j06.makeTitle(1000, "소시지를 드립니다!"));
 
         // 이름이 같은 오버로딩 메서드 호출!
-        System.out.println("오버로딩: "+
+        System.out.println("오버로딩1: "+
         j06.makeTitle(11, "레밍스게임", 20));
 
-    } //// main 메서드 ////
+        // 이름이 같은 오버로딩 메서드 호출!
+        System.out.println("오버로딩2: "+
+        j06.makeTitle(99.999));
+
+
+
+    } ////////////// main 메서드 /////////////////
 
     // 나의 첫 메서드
     public static void myFirst(){
@@ -92,6 +98,12 @@ public class Java06 {
     public String makeTitle(int month, String evt, int people){
         return month + "월의 " + 
         evt + "이벤트 당첨자는 " + people + "명입니다!";
+    } ////////////// makeTitle 메서드 ////////////
+
+    // 표어만들기를 똑같이 하는데 내용이 다르므로 전달값도 다름
+    // 메서드 명이 똑같다!!! -> 오버로딩 메서드!!!
+    public String makeTitle(double ndata){
+        return ndata + "%의 확률로 당신에게 당첨의 기회를 드립니다! ";
     } ////////////// makeTitle 메서드 ////////////
 
 
