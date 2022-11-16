@@ -36,6 +36,14 @@ public class Java07 {
          *    그 클래스는 객체를 생성하여 모듈별
          *    기능별로 나눠진 모듈화 프로그래밍 방식
          */
+
+        // 과일 클래스 생성 및 클래스 호출,속성변경하기!
+        Fruits fruits = new Fruits("딸기", "빨간색", "상큼한향", 0.005);
+
+
+
+
+
     } /////// main 메서드 ///////
 } ////////// Java07 클래스 //////////////////
 
@@ -51,7 +59,7 @@ class Fruits {
     // 4. 과일개당무게
     double weight;
     // 5. 과일에대한 정의
-    String definition;
+    String definition = "나무 따위를 가꾸어 얻는, 사람이 먹을 수 있는 열매";
 
     /*******************************************
      * [ 클래스 생성자(Constructor) ]
@@ -87,12 +95,17 @@ class Fruits {
 
     } ///// Fruits 생성자 /////////
 
-    // 메서드 - 클래스 안에 정의된 함수
+    // 메서드1 - 클래스 안에 정의된 함수
     public void fruitsFn(){
         System.out.println("나는"+name+"입니다! 색은 "+
         color + "이고 냄새는 "+ flavor + "입니다. 개당 무게는 "+
         weight + "kg 입니다.");
     } ////////// fruitsFn 메서드 ////////
+
+    // 메서드2 - 과일의 정의를 찍는 메서드
+    public void defineFruit() {
+        System.out.println("과일의 정의는 "+ definition + "이다.");
+    } ///////// defineFruit 메서드 ///////
 
 
 } //////////// Fruits 클래스 /////////////
