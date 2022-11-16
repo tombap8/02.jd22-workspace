@@ -2,12 +2,17 @@
 public class Java07 {
     // public Java07(){} 
     // -> 안만들어도 클래스와 같은 이름의 메서드 -> 생성자가 만들어짐!!
+
     /****************************************************
         클래스명과 동일한 이름의 파일에는 
         단 하나의 public 클래스를 가질 수 있다!
+        
         그래서 하나의 java파일안에는 다른 클래스를 만들 수 있다!
         단, 다른 추가클래스는 public 접근한정자를 쓸 수 없다!
         접근한정자(Modifier)를 안쓰면 default라고 부른다
+
+        -> bin폴더에 생성된 class파일은 class단위로
+        개별적으로 생성된다!(꼭 확인해 볼것!)
         _____________________________________________
 
         [ 클래스에서 사용하는 접근한정자(Modifier) ]
@@ -37,12 +42,40 @@ public class Java07 {
          *    기능별로 나눠진 모듈화 프로그래밍 방식
          */
 
+        // 1. 클래스 생성
         // 과일 클래스 생성 및 클래스 호출,속성변경하기!
         Fruits fruits = new Fruits("딸기", "빨간색", "상큼한향", 0.005);
 
+        // 2. 메서드 호출
+        // 과일의 정의를 찍는 메서드 호출!
+        fruits.defineFruit();
+
+        // 3. 속성값 변경
+        fruits.name = "수박";
+        fruits.flavor = "달달한향";
+        fruits.weight = 1.8;
+
+        // 다시 과일 속성찍기 메서드 호출
+        fruits.fruitsFn();
 
 
+        // 과일정의 속성 변경하기
+        // final 변수는 상수이므로 못바꾼다!
+        // fruits.definition = "과일은 채소와 같다!";
 
+        // 과일의 정의 찍기 메서드 호출
+        // fruits.defineFruit();
+
+
+        // 사과 클래스 메서드 호출하기 ////
+        Apple apple = new Apple();
+        apple.appleFn("빛나는");
+        apple.appleFn("맛있는");
+
+        // 바나나 클래스 메서드 호출하기 ///
+        Banana banana = new Banana();
+        banana.bananaFn("맛좋은");
+        banana.bananaFn("커다란");
 
     } /////// main 메서드 ///////
 } ////////// Java07 클래스 //////////////////
@@ -58,8 +91,9 @@ class Fruits {
     String flavor;
     // 4. 과일개당무게
     double weight;
-    // 5. 과일에대한 정의
-    String definition = "나무 따위를 가꾸어 얻는, 사람이 먹을 수 있는 열매";
+    // 5. 과일에대한 정의 : 
+    // -> 값을 못바꾸도록 상수화함! final
+    final String definition = "나무 따위를 가꾸어 얻는, 사람이 먹을 수 있는 열매";
 
     /*******************************************
      * [ 클래스 생성자(Constructor) ]
@@ -109,3 +143,21 @@ class Fruits {
 
 
 } //////////// Fruits 클래스 /////////////
+
+
+/////// 바나나 클래스 /////////////////////
+class Banana {
+    public void bananaFn(String word){
+        System.out.println("나는 " + word + " 바나나입니다!");
+    } //////// bananaFn 메서드 ///////
+
+} ////////// Banana 클래스 //////////////
+
+
+/////// 사과 클래스 /////////////////////
+class Apple {
+    public void appleFn(String word){
+        System.out.println("나는 " + word + " 사과입니다!");
+    } //////// appleFn 메서드 ///////
+
+} ////////// Apple 클래스 //////////////
