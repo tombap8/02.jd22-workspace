@@ -5,7 +5,7 @@ import fruitpack.asia.JapanFruit;
 import fruitpack.asia.KoreaFruit;
 
 // Java07. 클래스와 객체 그리고 속성과 메서드
-// + 접근한정자(Modifier) + 캡슐화 + 팩키지
+// + 접근한정자(Modifier) + 캡슐화 + 패키지
 public class Java07 {
     // public Java07(){} 
     // -> 안만들어도 클래스와 같은 이름의 메서드 -> 생성자가 만들어짐!!
